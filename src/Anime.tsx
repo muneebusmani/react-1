@@ -13,14 +13,12 @@ interface AnimeProps {
 }
 export const Anime: React.FC<AnimeProps> = (props) => {
   return (
-    <>
-      <Card>
-        <CardHeader>
-          <CardImage src={props.image}></CardImage>
-          <CardTitle>{props.title}</CardTitle>
-          <CardDescription>{props.description}</CardDescription>
-        </CardHeader>
-      </Card>
-    </>
+    <Card className="w-auto">
+      <CardHeader className="p-0 text-center">
+        <CardImage className="h-48" src={props.image}></CardImage>
+        <CardTitle>{props.title}</CardTitle>
+        <CardDescription>{props.description}</CardDescription>
+      </CardHeader>
+    </Card>
   );
 };
