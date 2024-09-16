@@ -17,11 +17,13 @@ interface AnimeFullProps {
 }
 export const Anime: React.FC<AnimeFullProps> = (props) => {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="w-auto h-full">
+      <CardHeader className="p-0 text-center">
         <CardImage src={props.image}></CardImage>
-        <CardTitle>{props.title}</CardTitle>
-        <CardDescription>{props.description}</CardDescription>
+        <CardTitle className="px-6 pt-3">{props.title}</CardTitle>
+        <CardDescription className="px-6 pb-6">
+          {props.description}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <p>{props.content}</p>

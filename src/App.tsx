@@ -5,26 +5,23 @@ import {
   CarouselContent,
   CarouselItem,
 } from "./components/ui/carousel";
+import { NavBar } from "./NavBar";
 
 export const App = () => {
   return (
     <>
+      <NavBar />
       <Carousel>
         <CarouselContent>
-          <CarouselItem className="basis-[10]">
-            <Anime
-              image={AnimeList[0].image}
-              title={AnimeList[0].title}
-              description={AnimeList[0].description}
-            ></Anime>
-          </CarouselItem>
-          <CarouselItem className="basis-[10]">
-            <Anime
-              image={AnimeList[1].image}
-              title={AnimeList[1].title}
-              description={AnimeList[1].description}
-            ></Anime>
-          </CarouselItem>
+          {AnimeList.map((list) => (
+            <CarouselItem className="basis-1/6">
+              <Anime
+                image={list.image}
+                title={list.title}
+                description={list.description}
+              ></Anime>
+            </CarouselItem>
+          ))}
         </CarouselContent>
       </Carousel>
     </>
