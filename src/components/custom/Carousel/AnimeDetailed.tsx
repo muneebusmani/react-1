@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "./components/ui/card";
+} from "@/components/ui/card";
 
 interface AnimeFullProps {
   image: string;
@@ -15,7 +15,7 @@ interface AnimeFullProps {
   content: string;
   footer_url: string;
 }
-export const Anime: React.FC<AnimeFullProps> = (props) => {
+export const AnimeDetailed: React.FC<AnimeFullProps> = (props) => {
   return (
     <Card className="w-auto h-full">
       <CardHeader className="p-0 text-center">

@@ -4,14 +4,14 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "./components/ui/card";
+} from "@/components/ui/card";
 
 interface AnimeProps {
   image: string;
   title: string;
   description: string;
 }
-export const Anime: React.FC<AnimeProps> = (props) => {
+export const AnimeCarousel: React.FC<AnimeProps> = (props) => {
   return (
     <Card className="w-auto h-full">
       <CardHeader className="p-0 text-center">
